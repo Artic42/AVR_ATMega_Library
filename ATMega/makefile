@@ -3,8 +3,8 @@
 ARCHIVER= ar
 AFLAGS= -cvq
 CC = avr-gcc
-CFLAGS = -c -Wall
-IPATH = -ISource/Headers
+CFLAGS = -c -Wall 
+IPATH = -ISource/Headers 
 TARGET = -mmcu=atmega328p
 MAIN_LIBRARY = ../bin/libATMega328P.so
 LIBRARY_OBJECTS = bin/*.lib
