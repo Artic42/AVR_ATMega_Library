@@ -19,7 +19,7 @@ all:
 bin/Blinky.elf: Source/Blinky.c
 	$(CC) $(CFLAG) $(IPATH) $(TARGET) Source/Blinky.c bin/libATMega328P.so  -o bin/Blinky.elf
 	@echo "Blinky builded"
-bin/HelloWorld.elf: HelloWorld.c
+bin/HelloWorld.elf: Source/HelloWorld.c
 	$(CC) $(CFLAG) $(IPATH) $(TARGET) Source/HelloWorld.c bin/libATMega328P.so -o bin/HelloWorld.elf
 	@echo "Hello World builded"
 

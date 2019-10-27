@@ -44,12 +44,12 @@ extern char USART_CheckAnyUSARTError (void);
 * 								Definitions									 *
 *****************************************************************************/
 
-#define ASYNCHRONOUS_MODE	0;
-#define SYNCHRONOUS_MODE	1;
-#define MASTER_SPI			2;
+#define ASYNCHRONOUS_MODE	0
+#define SYNCHRONOUS_MODE	1
+#define MASTER_SPI			2
 
-#define EVEN				0;
-#define ODD					1;
+#define EVEN				0
+#define ODD					1
 
 
 #endif /* USART_H_ */
