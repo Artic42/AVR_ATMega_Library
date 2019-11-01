@@ -2,7 +2,7 @@
 *							Timer.c											*
 *****************************************************************************
 *																			*
-*	Compiler:				Atmel Studio 7									*
+*	Compiler:				AVR-GCC											*
 *	Author:					Artic42											*
 *	Version:				1.0												*
 *	Board:					Atmel ATMega 328P (Arduino UNO)					*
@@ -11,14 +11,14 @@
 *	Description:			Set of function to control standard features of	*
 *							timers 0,1 & 2 of the ATmega328P and compatibles*
 *	Requirements:			None											*
-*																			*											
+*																			*
 ****************************************************************************/
 
 #include <avr/io.h>
 #include <Timer.h>
 
 /****************************************************************************
-*					Timer_ConfigureComparatorNonPWM					*
+*					Timer_ConfigureComparatorNonPWM							*
 *****************************************************************************
 *			It configures the comparator in 4 different modes				*
 *****************************************************************************
@@ -40,7 +40,7 @@
 *	Mode3:			Set OCxA on compare match								*
 ****************************************************************************/
 
-void Timer_ConfigureComparatorMode (int Timer,char Comparator,int Mode)
+void Timer_ConfigureComparatorMode (char Timer,char Comparator,char Mode)
 {
 	char Shift,Temp1,Temp2;
 
@@ -89,7 +89,7 @@ void Timer_ConfigureComparatorMode (int Timer,char Comparator,int Mode)
 *	Source7:		External clock source, clock on rising edge				*
 ****************************************************************************/
 
-void Timer_SelectClockSource (int Timer,int Source)
+void Timer_SelectClockSource (char Timer,char Source)
 {
 	char Temp;
 
@@ -124,7 +124,7 @@ void Timer_SelectClockSource (int Timer,int Source)
 *	Timer:	 		Timer that you want select								*
 ****************************************************************************/
 
-void Timer_EnableOverflowInterrupt (int Timer)
+void Timer_EnableOverflowInterrupt (char Timer)
 {
 	switch (Timer)
 	{
@@ -143,7 +143,7 @@ void Timer_EnableOverflowInterrupt (int Timer)
 *	Timer:	 		Timer that you want select								*
 ****************************************************************************/
 
-void Timer_DisableOverflowInterrupt (int Timer)
+void Timer_DisableOverflowInterrupt (char Timer)
 {
 	switch (Timer)
 	{
@@ -162,7 +162,7 @@ void Timer_DisableOverflowInterrupt (int Timer)
 *	Timer:	 		Timer that you want select								*
 ****************************************************************************/
 
-void Timer_EnableCompareAInterrupt (int Timer)
+void Timer_EnableCompareAInterrupt (char Timer)
 {
 	switch (Timer)
 	{
@@ -181,7 +181,7 @@ void Timer_EnableCompareAInterrupt (int Timer)
 *	Timer:	 		Timer that you want select								*
 ****************************************************************************/
 
-void Timer_DisableComapareAInterrupt (int Timer)
+void Timer_DisableComapareAInterrupt (char Timer)
 {
 	switch (Timer)
 	{
@@ -200,7 +200,7 @@ void Timer_DisableComapareAInterrupt (int Timer)
 *	Timer:	 		Timer that you want select								*
 ****************************************************************************/
 
-void Timer_EnableCompareBInterrupt (int Timer)
+void Timer_EnableCompareBInterrupt (char Timer)
 {
 	switch (Timer)
 	{
@@ -219,7 +219,7 @@ void Timer_EnableCompareBInterrupt (int Timer)
 *	Timer:	 		Timer that you want select								*
 ****************************************************************************/
 
-void Timer_DisableComapareBInterrupt (int Timer)
+void Timer_DisableComapareBInterrupt (char Timer)
 {
 	switch (Timer)
 	{
@@ -240,7 +240,7 @@ void Timer_DisableComapareBInterrupt (int Timer)
 *	Value:			The value we want to set
 ****************************************************************************/
 
-void Timer_SetValue (int Timer,int Value)
+void Timer_SetValue (char Timer,int Value)
 {
 	switch (Timer)
 	{
@@ -260,7 +260,7 @@ void Timer_SetValue (int Timer,int Value)
 *	Value:			The value we want to set
 ****************************************************************************/
 
-void Timer_SetValueComparatorA (int Timer,int Value)
+void Timer_SetValueComparatorA (char Timer,int Value)
 {
 	switch (Timer)
 	{
@@ -280,7 +280,7 @@ void Timer_SetValueComparatorA (int Timer,int Value)
 *	Value:			The value we want to set
 ****************************************************************************/
 
-void Timer_SetValueComparatorB (int Timer,int Value)
+void Timer_SetValueComparatorB (char Timer,int Value)
 {
 	switch (Timer)
 	{

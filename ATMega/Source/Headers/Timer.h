@@ -11,17 +11,17 @@
 * 								Prototypes									*
 ****************************************************************************/
 
-extern void Timer_ConfigureComparatorMode (int Timer,char Comparator,int Mode);
-extern void Timer_SelectClockSource (int Timer,int Source);
-extern void Timer_EnableOverflowInterrupt (int Timer);
-extern void Timer_DisableOverflowInterrupt (int Timer);
-extern void Timer_EnableCompareAInterrupt (int Timer);
-extern void Timer_DisableComapareAInterrupt (int Timer);
-extern void Timer_EnableCompareBInterrupt (int Timer);
-extern void Timer_DisableComapareBInterrupt (int Timer);
-extern void Timer_SetValue (int Timer,int Value);
-extern void Timer_SetValueComparatorA (int Timer,int Value);
-extern void Timer_SetValueComparatorB (int Timer,int Value);
+extern void Timer_ConfigureComparatorMode (char Timer,char Comparator,char Mode);
+extern void Timer_SelectClockSource (char Timer,char Source);
+extern void Timer_EnableOverflowInterrupt (char Timer);
+extern void Timer_DisableOverflowInterrupt (char Timer);
+extern void Timer_EnableCompareAInterrupt (char Timer);
+extern void Timer_DisableComapareAInterrupt (char Timer);
+extern void Timer_EnableCompareBInterrupt (char Timer);
+extern void Timer_DisableComapareBInterrupt (char Timer);
+extern void Timer_SetValue (char Timer,int Value);
+extern void Timer_SetValueComparatorA (char Timer,int Value);
+extern void Timer_SetValueComparatorB (char Timer,int Value);
 
 
 /*****************************************************************************

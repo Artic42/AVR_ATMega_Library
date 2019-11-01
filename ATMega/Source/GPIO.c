@@ -2,7 +2,7 @@
 *							GPIO.c								*
 *****************************************************************************
 *																			*
-*	Compiler:				Atmel Studio 7									*
+*	Compiler:				AVR-GCC											*
 *	Author:					Artic42											*
 *	Version:				1.0												*
 *	Board:					Atmel ATMega 328P (Arduino UNO)					*
@@ -31,7 +31,7 @@
 *					pin														*
 ****************************************************************************/
 
-void GPIO_ConfigureAsOutput (char Port, int Pin, int DefaultValue)
+void GPIO_ConfigureAsOutput (char Port, char Pin, char DefaultValue)
 
 {
 	char Temp;
@@ -57,10 +57,10 @@ void GPIO_ConfigureAsOutput (char Port, int Pin, int DefaultValue)
 *								Parameters									*
 *	Port:	 		Port of the pin that you want to configure as output	*
 *	Pin:			Number of the pin you want to configure as output		*
-*	PullUp:			If true the PullUp resistance is enabled																		*
+*	PullUp:			If true the PullUp resistance is enabled				*
 ****************************************************************************/
 
-void GPIO_ConfigureAsInput (char Port,int Pin,int PullUp)
+void GPIO_ConfigureAsInput (char Port,char Pin,char PullUp)
 {
 	char Temp;
 
@@ -89,7 +89,7 @@ void GPIO_ConfigureAsInput (char Port,int Pin,int PullUp)
 *					pin														*
 ****************************************************************************/
 
-void GPIO_Write (char Port,int Pin, int Value)
+void GPIO_Write (char Port,char Pin, char Value)
 {
 	char Temp;
 
@@ -129,10 +129,9 @@ void GPIO_Write (char Port,int Pin, int Value)
 *	Return:			It returns the value of the requested pin				*
 ****************************************************************************/
 
-int GPIO_Read (char Port,int Pin)
+char GPIO_Read (char Port,char Pin)
 {
-	char 	Temp1,Temp2;
-	int		Value;
+	char 	Temp1,Temp2,Value;
 
 	switch (Port)
 	{
@@ -142,7 +141,7 @@ int GPIO_Read (char Port,int Pin)
 	default:	Temp1=0;
 	}
 	Temp2 = 0x01 << Pin;
-	Value = (int) (Temp1 & Temp2);
+	Value = Temp1 & Temp2;
 
 	return Value;
 }
@@ -160,7 +159,7 @@ int GPIO_Read (char Port,int Pin)
 *	Return:			It returns the value of the requested pin				*
 ****************************************************************************/
 
-void GPIO_Toggle (char Port,int Pin)
+void GPIO_Toggle (char Port,char Pin)
 {
 	char Temp;
 

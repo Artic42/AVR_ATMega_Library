@@ -11,11 +11,11 @@
 * 								Prototypes									*
 ****************************************************************************/
 
-extern void GPIO_ConfigureAsOutput (char Port, int Pin, int DefaultValue);
-extern void GPIO_ConfigureAsInput (char Port,int Pin,int PullUp);
-extern void GPIO_Write (char Port,int Pin, int Value);
-extern int GPIO_Read (char Port,int Pin);
-extern void GPIO_Toggle (char Port,int Pin);
+extern void GPIO_ConfigureAsOutput (char Port, char Pin, char DefaultValue);
+extern void GPIO_ConfigureAsInput (char Port,char Pin,char PullUp);
+extern void GPIO_Write (char Port,char Pin, char Value);
+extern char GPIO_Read (char Port,char Pin);
+extern void GPIO_Toggle (char Port,char Pin);
 
 /*****************************************************************************
 * 								Definitions									 *
