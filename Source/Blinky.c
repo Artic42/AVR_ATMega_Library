@@ -41,8 +41,8 @@ int main(void)
 
 void Initialize_HW (void)
 {
-	GPIO_ConfigureAsInput(PB,PIN2,PULLUP_OFF);
-	GPIO_ConfigureAsOutput(PB,PIN0,BTRUE);
+	GPIO_ConfigureAsInput(PC,PIN4,PULLUP_ON);
+	GPIO_ConfigureAsOutput(PD,PIN3,BTRUE);
 	
 	Timer_SelectClockSource(TIMER_0,PRESCALE_1024);
 	Timer_EnableOverflowInterrupt(TIMER_0);
