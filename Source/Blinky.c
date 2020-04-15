@@ -23,7 +23,7 @@ int main(void)
 	
     while (1) 
     {
-		input=GPIO_Read(PB,PIN2);
+		input=GPIO_Read(PC,PIN4);
 		if (timerFlag == 1)
 		{
 			timerFlag = 0;
@@ -32,7 +32,7 @@ int main(void)
 			if (LedCounter > 100)
 			{
 				LedCounter = 0;
-				GPIO_Toggle(PB,PIN0);
+				GPIO_Toggle(PD,PIN3);
 			}		
 			
 		}
