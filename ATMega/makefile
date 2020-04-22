@@ -33,7 +33,7 @@ bin/Timer.lib: Source/Timer.c Source/Headers/Timer.h
 #Extra make commands
 
 clean:
-	@rm -r bin/*.lib
+	@rm -r $(LIBRARY_OBJECTS) 
 	@echo "Files deleted"
 
 GPIO: bin/GPIO.lib
